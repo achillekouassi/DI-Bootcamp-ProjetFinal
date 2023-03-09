@@ -8,18 +8,24 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { ErrorComponent } from './_utils/error/error.component';
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrorComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+
 
   ],
   providers: [],

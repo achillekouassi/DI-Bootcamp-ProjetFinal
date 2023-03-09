@@ -92,10 +92,12 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/params/css/fonts.googleapis.min.css",
               "src/styles.css"
+
             ],
             "scripts": [
               "chemin/vers/jquery/jquery.min.js",
               "chemin/vers/bootstrap/dist/js/bootstrap.min.js"
+
             ]
           }
         }
