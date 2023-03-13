@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  background-image:  url("https://www.malakoffhumanis.com/sites/smile/files/styles/editorial_page_top_image_desktop/public/images/2020-282-mh-photo-medecin-traitant-et-parcours-de-soins-coordonnes-as-295664542-1024x577.jpg?itok=3UJ0oKQL");
+  background:  url("https://www.malakoffhumanis.com/sites/smile/files/styles/editorial_page_top_image_desktop/public/images/2020-282-mh-photo-medecin-traitant-et-parcours-de-soins-coordonnes-as-295664542-1024x577.jpg?itok=3UJ0oKQL"),rgba(0,0,0,0.1);
+  background-blend-mode: color ;
   background-size: cover;
 }

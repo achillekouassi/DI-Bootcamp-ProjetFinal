@@ -2,14 +2,14 @@
   <h1>Login</h1>
   <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
 
-      {{ form.telephone }}
+  
     <div class="txt_field">
       <input type="text"  name="telephone" required [(ngModel)]="form.telephone" #telephone="ngModel">
       <span></span>
       <label>Telephone</label>
       <div class="form_error" *ngIf="telephone.errors && f.submitted"> Veuillez saisir votre numero de téléphone</div>
     </div>
-    {{ form.password }}
+
     <div class="txt_field">
 
       <input type="password" name="password"  [(ngModel)]="form.password" #password="ngModel" required minlength="5">

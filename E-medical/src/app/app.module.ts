@@ -9,6 +9,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { ErrorComponent } from './_utils/error/error.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 
@@ -25,6 +26,7 @@ import { ErrorComponent } from './_utils/error/error.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule
 
 
   ],
