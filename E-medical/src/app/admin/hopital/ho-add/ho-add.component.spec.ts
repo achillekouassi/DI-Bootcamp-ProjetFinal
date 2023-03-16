@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UIndexComponent } from './u-index.component';
+import { HoAddComponent } from './ho-add.component';
 
-describe('UIndexComponent', () => {
-  let component: UIndexComponent;
-  let fixture: ComponentFixture<UIndexComponent>;
+describe('HoAddComponent', () => {
+  let component: HoAddComponent;
+  let fixture: ComponentFixture<HoAddComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UIndexComponent ]
+      declarations: [ HoAddComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UIndexComponent);
+    fixture = TestBed.createComponent(HoAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

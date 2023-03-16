@@ -31,9 +31,18 @@ span{
 .collapse .btn:hover{
   color:aliceblue;
   background-color:rgb(0, 157, 255);
-
+}
+.collapse button{
+  border: none;
+  font-size: 20px;
+  background: none;
 
 }
+.collapse button:hover{
+ font-size: 25px;
+}
+
+
 
 
 

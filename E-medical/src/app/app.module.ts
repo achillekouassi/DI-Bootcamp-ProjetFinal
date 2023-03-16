@@ -10,6 +10,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { ErrorComponent } from './_utils/error/error.component';
 import { HttpClientModule} from '@angular/common/http';
+import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 
 
 
@@ -30,7 +31,7 @@ import { HttpClientModule} from '@angular/common/http';
 
 
   ],
-  providers: [],
+  providers: [TokenInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {

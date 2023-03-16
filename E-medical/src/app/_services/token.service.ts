@@ -17,4 +17,17 @@ export class TokenService {
     console.log(token)
     return !! token
   }
+
+  clearToken():void{
+    localStorage.removeItem('token')
+    this.router.navigate(['/'])
+  }
+  clearTokenExpired():void{
+    localStorage.removeItem('token')
+    this.router.navigate(['auth'])
+  }
+
+  getToken(): string | null{
+    return localStorage.getItem('token')
+  }
 }

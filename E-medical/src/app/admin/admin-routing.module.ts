@@ -8,8 +8,8 @@ const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch:'full'},
     { path: 'dashboard', component: DashboardComponent},
     {
-      path: 'user', loadChildren: () => import('./user/user.module')
-      .then(m => m.UserModule)
+      path: 'hopital', loadChildren: () => import('./hopital/hopital.module')
+      .then(m => m.HopitalModule)
     },
 
     {

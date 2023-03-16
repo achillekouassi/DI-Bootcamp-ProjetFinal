@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-primary " >
+  <div class="container-fluid ">
+    <a class="navbar-brand " href="#" style="color:aliceblue">Liste des hopitaux</a>
+  </div>
+</nav>
+<hr>
+<table>
+  <tr >
+    <th>Id</th>
+    <th>Hopital</th>
+    <th>Adresse</th>
+    <th>Commune</th>
+    <th>Téléphone</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let hopital of hopitalList">
+      <td>{{hopital.id}}</td>
+      <td>{{hopital.nom}}</td>
+      <td>{{hopital.adresse}}</td>
+      <td>{{hopital.commune}}</td>
+      <td>{{hopital.telephone}}</td>
+      <td><a routerLink="['modifier',hopital.id]">Modifier</a></td>
+
+    </tr>
+
+
+</table>

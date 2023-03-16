@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UAddComponent } from './u-add.component';
+import { HoDeleteComponent } from './ho-delete.component';
 
-describe('UAddComponent', () => {
-  let component: UAddComponent;
-  let fixture: ComponentFixture<UAddComponent>;
+describe('HoDeleteComponent', () => {
+  let component: HoDeleteComponent;
+  let fixture: ComponentFixture<HoDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UAddComponent ]
+      declarations: [ HoDeleteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UAddComponent);
+    fixture = TestBed.createComponent(HoDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,6 +11,13 @@
       </ul>
       <form class="d-flex " role="search">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active btn" aria-current="page" [routerLink]="['rdv']" >
+                 Prise de rdv
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['medecin']">
                  Médecins
@@ -31,12 +38,10 @@
                  Hopitaux
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active btn" aria-current="page" [routerLink]="['rdv']" >
-                 Prise de rdv
-            </a>
-          </li>
 
+            <button [routerLink]="['admin']">
+              <i class="fa-solid fa-right-from-bracket" style="color:black"></i>
+            </button>
 
         </ul>
 
