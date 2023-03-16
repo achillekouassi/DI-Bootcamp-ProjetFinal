@@ -1,13 +1,13 @@
 <div class="center">
-  <h1>Connexion</h1>
-  <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
-
-
+  <h1>Administrateur</h1>
+  <form name="form"
+   #f="ngForm"
+  (ngSubmit)="f.form.valid && onSubmit()" >
     <div class="txt_field">
-      <input type="text"  name="telephone" required [(ngModel)]="form.telephone" #telephone="ngModel">
+      <input type="email"  name="email" required [(ngModel)]="form.email" #email="ngModel">
       <span></span>
-      <label>Telephone</label>
-      <div class="form_error" *ngIf="telephone.errors && f.submitted"> Veuillez saisir votre numero de téléphone</div>
+      <label>Email</label>
+      <div class="form_error" *ngIf="email.errors && f.submitted"> Veuillez saisir votre email</div>
     </div>
 
     <div class="txt_field">
@@ -23,7 +23,7 @@
     </div>
     <input type="submit" value="Login">
     <div class="signup_link">
-     Pas de compte? <a [routerLink]="['signup']">Inscription</a>
+
     </div>
   </form>
 </div>

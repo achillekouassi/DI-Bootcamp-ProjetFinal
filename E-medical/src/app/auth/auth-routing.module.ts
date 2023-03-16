@@ -2,11 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
+import { LogoutadminComponent } from './logoutadmin/logoutadmin.component';
+import { LoginmedecinComponent } from './loginmedecin/loginmedecin.component';
+import { LogoutmedecinComponent } from './logoutmedecin/logoutmedecin.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: '', redirectTo: 'loginadmin', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
-  { path: 'logout', component: LogoutComponent}
+  { path: 'logout', component: LogoutComponent},
+  { path: 'loginadmin', component: LoginadminComponent},
+  { path: 'logoutadmin', component: LogoutadminComponent},
+  { path: 'loginmedecin', component: LoginmedecinComponent},
+  { path: 'logoutmedecin', component: LogoutmedecinComponent},
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(): void{
     console.log(this.form)
-    this.http.post('http://localhost:8080/auth/login', this.form).subscribe(
+    this.http.post('http://localhost:8012/patient/login', this.form).subscribe(
       data => console.log(data),
       err => console.log(err)
     )
