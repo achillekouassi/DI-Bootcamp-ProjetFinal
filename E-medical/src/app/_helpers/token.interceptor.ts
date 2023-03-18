@@ -22,13 +22,7 @@ export class TokenInterceptor implements HttpInterceptor {
       let clone = request.clone()
       console.log(clone)
       return next.handle(clone).pipe(
-        catchError(error =>{
-          console.log(error)
-          if(error.status === 401){
-            this.tokenService.clearTokenExpired()
-          }
-          return throwError('Session espirée')
-        })
+   
       )
     }
 

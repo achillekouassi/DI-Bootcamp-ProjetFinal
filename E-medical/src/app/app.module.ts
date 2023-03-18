@@ -11,6 +11,7 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { ErrorComponent } from './_utils/error/error.component';
 import { HttpClientModule} from '@angular/common/http';
 import { TokenInterceptorProvider } from './_helpers/token.interceptor';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +28,8 @@ import { TokenInterceptorProvider } from './_helpers/token.interceptor';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
 
   ],

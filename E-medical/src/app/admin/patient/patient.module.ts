@@ -5,6 +5,7 @@ import { PatientRoutingModule } from './patient-routing.module';
 import { PIndexComponent } from './p-index/p-index.component';
 import { PAddComponent } from './p-add/p-add.component';
 import { PDeleteComponent } from './p-delete/p-delete.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PDeleteComponent } from './p-delete/p-delete.component';
   ],
   imports: [
     CommonModule,
-    PatientRoutingModule
+    PatientRoutingModule,
+    FormsModule
   ]
 })
 export class PatientModule { }

@@ -1,5 +1,5 @@
 <div class="center">
-  <h1>Connexion</h1>
+  <h1>Login</h1>
   <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
 
 
@@ -12,7 +12,7 @@
 
     <div class="txt_field">
 
-      <input type="password" name="password"  [(ngModel)]="form.password" #password="ngModel" required minlength="5">
+      <input type="password" name="mot_de_passe"  [(ngModel)]="form.password" #password="ngModel" required minlength="5">
       <span></span>
       <label>Mot de Passe</label>
 
@@ -23,7 +23,7 @@
     </div>
     <input type="submit" value="Login">
     <div class="signup_link">
-     Pas de compte? <a [routerLink]="['signup']">Inscription</a>
+     Pas de compte? <a href="#">Inscription</a>
     </div>
   </form>
 </div>

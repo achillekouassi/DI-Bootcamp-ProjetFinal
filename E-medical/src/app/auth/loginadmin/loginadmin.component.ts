@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../_services/auth.service';
-import { ICredential } from 'src/app/_interfaces/credential';
+import { ICredential } from 'src/app/interfaces/credential';
 import { TokenService } from '../../_services/token.service';
 
 

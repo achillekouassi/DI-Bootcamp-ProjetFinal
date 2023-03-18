@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ICredential } from '../_interfaces/credential';
-import { IToken } from '../_interfaces/token';
+import { ICredential } from '../interfaces/credential';
+import { IToken } from '../interfaces/token';
 import { Observable } from 'rxjs';
 
 @Injectable({

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HopitalRoutingModule } from './hopital-routing.module';
 import { HoAddComponent } from './ho-add/ho-add.component';
 import { HoDeleteComponent } from './ho-delete/ho-delete.component';
