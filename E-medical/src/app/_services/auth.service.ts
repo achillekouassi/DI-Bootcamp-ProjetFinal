@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  con(value: any) {
+    throw new Error('Method not implemented.');
+  }
 
   url = 'http://localhost:8011/administrateur/login'
 

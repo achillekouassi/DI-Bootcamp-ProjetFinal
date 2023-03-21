@@ -12,8 +12,15 @@ import { ErrorComponent } from './_utils/error/error.component';
 import { HttpClientModule} from '@angular/common/http';
 import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Pipe, PipeTransform } from '@angular/core';
 
-
+@Pipe({ name: 'sample' })
+export class SamplePipe implements PipeTransform {
+  transform(input: string): string {
+        return `${input} from sample pipe`;
+  }
+}
 
 
 
@@ -22,6 +29,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     ErrorComponent,
+    SamplePipe,
+
 
   ],
   imports: [
@@ -29,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+
 
 
   ],
@@ -44,3 +55,4 @@ export class AppModule {
     library.addIcons(faSignInAlt);
   }
 }
+

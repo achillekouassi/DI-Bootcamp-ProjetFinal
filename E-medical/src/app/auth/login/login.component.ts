@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ConnecterService } from 'src/app/_services/connecter.service';
+import { TokenService } from 'src/app/_services/token.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,18 +12,25 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   form = {
-    telephone: null,
-    password:null
+    telephone: '',
+    password:''
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private connecterService:ConnecterService,
+    private tokenService:TokenService
+    ) {}
   ngOnInit(): void {
   }
   onSubmit(): void{
     console.log(this.form)
-    this.http.post('http://localhost:8012/patient/login', this.form).subscribe(
-      data => console.log(data),
+    this.connecterService.con(this.form).subscribe(
+      data =>{
+       console.log(data.token)
+       this.tokenService.saveToken(data.token)
+      },
       err => console.log(err)
+
     )
   }
 }

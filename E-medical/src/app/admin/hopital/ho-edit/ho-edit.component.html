@@ -4,38 +4,40 @@
 
 
     <div class="txt_field">
-      <input type="text"  name="nom" >
+      <input type="text"  name="nom" [(ngModel)]="hopital[0].nom">
       <span></span>
-      <label>Nom</label>
+      <label>Nom de l'hopital</label>
     </div>
 
     <div class="txt_field">
-      <input type="text"  name="telephone">
-      <span></span>
-      <label>Telephone</label>
-
-    </div>
-
-    <div class="txt_field">
-      <input type="text"  name="adresse" >
+      <input type="text"  name="adresse" [(ngModel)]="hopital[0].adresse">
       <span></span>
       <label>Adresse</label>
 
     </div>
+
+    <div class="txt_field">
+      <input type="text"  name="commune" [(ngModel)]="hopital[0].commune">
+      <span></span>
+      <label>Commune</label>
+
+    </div>
      <div class="txt_field">
-      <input type="text"  name="telephone" >
+      <input type="text"  name="telephone" [(ngModel)]="hopital[0].telephone">
       <span></span>
       <label>Telephone</label>
 
     </div>
-     <div class="txt_field">
-      <input type="text"  name="telephone" >
-      <span></span>
-      <label>A</label>
 
+
+    <div class="txt_field">
+      <input type="password"  name="password" [(ngModel)]="hopital[0].password">
+      <span></span>
+      <label>Mot de passe</label>
     </div>
 
-    <input type="submit" value="Modifier">
+
+  <input type="submit" value="Modifier" (click)="EditHopital()">
     <div class="signup_link">
 
     </div>

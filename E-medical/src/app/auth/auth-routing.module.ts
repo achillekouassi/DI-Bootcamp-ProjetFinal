@@ -9,7 +9,7 @@ import { LogoutmedecinComponent } from './logoutmedecin/logoutmedecin.component'
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'loginadmin', pathMatch: 'full'},
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'loginadmin', component: LoginadminComponent},

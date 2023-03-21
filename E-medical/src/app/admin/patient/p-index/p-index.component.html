@@ -1,1 +1,42 @@
-<p>p-index works!</p>
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: aliceblue">Liste des patients</a>
+    <form class="d-flex">
+      <input type="text" class="form-control" placeholder="Rechercher un patient" [(ngModel)]="searchTerm" (keyup)="search()">
+
+      <!-- <input type="text" class="form-control" placeholder="Rechercher un hôpital" [(ngModel)]="searchTerm" (keyup)="search()"> -->
+    </form>
+  </div>
+</nav>
+
+<hr>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Patient</th>
+    <th>Adresse</th>
+    <th>Commune</th>
+    <th>Abonnement mensuel</th>
+    <th>Abonnement annuel</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let patient of displayedPatients; let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{patient.nom}}</td>
+    <td>{{patient.telephone}}</td>
+    <td>{{patient.password}}</td>
+    <td>{{patient.abonnement_mensuel}}</td>
+    <td>{{patient.abonnement_annuel}}</td>
+    <td>
+      <tr>
+        <td style="border:none"><a routerLink="modifier/{{patient.id}}" class="btn btn-primary">Modifier</a></td>
+        <td style="border:none"><a routerLink="delete/{{patient.id}}" class="btn btn-danger">Supprimer</a></td>
+      </tr>
+    </td>
+  </tr>
+</table>
+
+<div *ngIf="displayedPatients.length < patientList.length">
+  <button class="btn btn-primary" (click)="afficherReste()" style="margin-left:45%; margin-top:10px">Afficher le reste</button>
+</div>

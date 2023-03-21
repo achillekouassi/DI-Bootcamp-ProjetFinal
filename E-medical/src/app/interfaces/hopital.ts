@@ -5,4 +5,6 @@ export interface IHopital {
   commune:string;
   telephone:string;
   id_administrateur:string;
+  numero:string;
+  password:string;
 }

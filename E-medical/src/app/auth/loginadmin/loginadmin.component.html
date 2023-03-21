@@ -3,6 +3,7 @@
   <form name="form"
    #f="ngForm"
   (ngSubmit)="f.form.valid && onSubmit()" >
+  
     <div class="txt_field">
       <input type="email"  name="email" required [(ngModel)]="form.email" #email="ngModel">
       <span></span>

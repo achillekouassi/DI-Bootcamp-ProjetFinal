@@ -1,6 +1,8 @@
 <div class="center">
-  <h1>Login</h1>
-  <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
+  <h1>Se connecter</h1>
+  <form name="form"
+  #f="ngForm"
+  (ngSubmit)="f.form.valid && onSubmit()" >
 
 
     <div class="txt_field">
@@ -23,7 +25,7 @@
     </div>
     <input type="submit" value="Login">
     <div class="signup_link">
-     Pas de compte? <a href="#">Inscription</a>
+     Pas de compte? <a [routerLink]="['../signup']">Inscription</a>
     </div>
   </form>
 </div>

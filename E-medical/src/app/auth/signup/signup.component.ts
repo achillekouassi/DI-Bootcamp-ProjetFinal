@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../_services/auth.service';
-import { ActivatedRoute } from '@angular/router';
+import { AddpatientService } from 'src/app/_services/addpatient.service';
+import { IPatient } from 'src/app/interfaces/patient';
 
 @Component({
   selector: 'app-signup',
@@ -8,26 +8,30 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  form: any = {
-    nom:null,
-    telephone: null,
-    password:null
+  patient:IPatient = {
+    id:0,
+     nom:'',
+     telephone:'',
+     password:'',
+     abonnement_mensuel:0,
+     abonnement_annuel:0,
+
+   }
+
+  constructor(private addPatients:AddpatientService){}
+
+
+
+  ajouterPatient(){
+    this.addPatients.savePatient(this.patient).subscribe({
+   next:data=>{
+    console.log(data)
+    alert('Enregistré avec succès');
+   },
+   error:err=>{
+    console.log(err); }
+  });
   }
-
-  constructor(private AuthService:AuthService){}
-  
-
-  ngOnInit(): void{
-  }
-
-  onSubmit(): void{
-    console.log(this.form)
-    this.AuthService.login(this.form).subscribe(
-      (data: any) => console.log(data),
-      (err: any) => console.log(err)
-    )
-
-}
 
 }
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AddhopitalService } from 'src/app/_services/addhopital.service';
+
 
 @Component({
   selector: 'app-ho-edit',
@@ -9,41 +11,37 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HoEditComponent implements OnInit{
 
-  hopital: any = {
-    id: '',
-    nom: '',
-    adresse: '',
-    commune: '',
-    telephone: '',
-    id_administrateur: '',
-  }
+
+  id! :any
+  hopital:any ;// Define the hopital property
 
   constructor(
-    private activited: ActivatedRoute,
-    private http: HttpClient
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private serviceHopital : AddhopitalService
+
   ){}
 
   ngOnInit(): void {
-    let hid = this.activited.snapshot.paramMap.get('hid');
-    if (hid !== null) {
-      console.log(hid);
-      this.http.get<any>('http://localhost:8011/hospital/' + hid).subscribe(
-        data => {
-          console.log(data);
-          this.hopital = data;
-          console.log('Information de l\'hôpital:', this.hopital);
-        },
-        error => console.log(error)
-      );
+    this.route.params.subscribe(params => {
+      console.log(params);
+      console.log(params['id']);
+      this.http.get("http://localhost:8011/hospital/one/"+params['id'])
+            .subscribe((res:any) => { console.log(res);
+             this.hopital = res});
+
+    });
+
+
+  }
+
+EditHopital(){
+  this.id = this.route.snapshot.params['id']
+  this.serviceHopital.updateHopital(this.id).subscribe(
+    (data:any)=>{
+      this.hopital = data.data;
     }
-  }
-
-
-  onSubmit(): void {
-    this.http.put('http://localhost:8011/hospital/update', this.hopital).subscribe(
-      () => console.log('Hopital modifié avec succès'),
-      error => console.log(error)
-    )
-  }
+  )
+}
 
 }

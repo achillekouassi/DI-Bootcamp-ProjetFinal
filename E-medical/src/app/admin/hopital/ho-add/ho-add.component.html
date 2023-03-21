@@ -2,6 +2,11 @@
   <h1>Ajouter un hopital</h1>
   <form name="form" method="post">
     <div class="txt_field">
+      <input type="text"  name="numero" [(ngModel)]="hopital.numero" >
+      <span></span>
+      <label>Matricule</label>
+    </div>
+    <div class="txt_field">
       <input type="text"  name="nom" [(ngModel)]="hopital.nom" >
       <span></span>
       <label>Nom</label>
@@ -26,6 +31,11 @@
       <input type="text"  name="id_administrateur"  [(ngModel)]="hopital.id_administrateur">
       <span></span>
       <label>L'adminitrateur</label>
+    </div>
+  <div class="txt_field">
+      <input type="password"  name="password"  [(ngModel)]="hopital.password">
+      <span></span>
+      <label>L'Mot de passe</label>
     </div>
     <input type="submit" value="Ajouter" (click)="ajouterHopital()">
     <div class="signup_link">

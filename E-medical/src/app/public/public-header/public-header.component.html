@@ -13,35 +13,24 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
-            <a class="nav-link active btn" aria-current="page" [routerLink]="['rdv']" >
+            <a class="nav-link active btn" aria-current="page" [routerLink]="['admin/hopital']" >
                  Prise de rdv
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['medecin']">
-                 Médecins
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['sepecilite']">
-                 Specialités
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['horaire']">
-                 Horaire
-            </a>
-          </li>
+
+
+        
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['hopitaux']">
                  Hopitaux
             </a>
           </li>
-
-            <button [routerLink]="['admin']">
+<li>
+            <a [routerLink]="['admin/hopital']" class="btn btn" style="border:none">
               <i class="fa-solid fa-right-from-bracket" style="color:black"></i>
-            </button>
+            </a>
+          </li>
 
         </ul>
 

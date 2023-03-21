@@ -19,6 +19,8 @@ export class HoAddComponent {
     commune:'',
     telephone:'',
     id_administrateur:'',
+    numero:'',
+    password:'',
   }
 
   ajouterHopital(){

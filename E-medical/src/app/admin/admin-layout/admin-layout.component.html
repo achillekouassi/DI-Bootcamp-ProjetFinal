@@ -1,2 +1,74 @@
- <router-outlet></router-outlet>
+
+
+<input type="checkbox" id="checkbox">
+	<header class="header">
+		<h2 class="u-name">E-<b>medical</b>
+			<label for="checkbox">
+				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+			</label>
+		</h2>
+    <h2>Administrateur general</h2>
+    <div>
+      <button (click)="logout()"><i class="fa-solid fa-right-from-bracket" style="color:black"></i></button></div>
+
+	</header>
+	<div class="body">
+		<nav class="side-bar">
+
+			<ul>
+				<li>
+					<a >
+            <i class="fa-solid fa-user"></i>
+						<span>Administrateur</span>
+					</a>
+				</li>
+        <li>
+					<a routerLink="/admin/patient">
+            <div class="espace">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Patients</span></div>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/admin/medecin">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<span>Médecins</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/admin/hopital">
+						<i class="fa-solid fa-house-medical-flag"></i>
+						<span>Hopitaux</span>
+					</a>
+				</li>
+
+				<li>
+					<a routerLink="/admin/parametre">
+            <i class="fa-solid fa-truck-clock"></i>
+						<span>Rendez-vous</span>
+					</a>
+				</li>
+
+        <li>
+					<a routerLink="/admin/parametre">
+						<i class="fa-sharp fa-regular fa-timeline"></i>
+						<span>Horaires</span>
+					</a>
+				</li>
+        	<li>
+					<a routerLink="/admin/parametre">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						<span>Parametre</span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+		<section class="section-1">
+      <router-outlet></router-outlet>
+		</section>
+	</div>
+
 

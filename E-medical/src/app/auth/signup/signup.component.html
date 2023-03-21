@@ -1,36 +1,29 @@
-<div class="center">
+ <div class="center">
   <h1>Inscription</h1>
-  <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
-
-
+  <form name="form" method="post">
     <div class="txt_field">
-      <input type="text" name="nom" required [(ngModel)]="form.nom" #nom="ngModel">
+      <input type="text"  name="nom" [(ngModel)]="patient.nom" >
       <span></span>
-      <label>Nom et Prenoms<i class="el el-adjust"></i></label>
-      <div class="form_error" *ngIf="nom.errors && f.submitted"> Veuillez saisir votre nom</div>
+      <label>Nom</label>
     </div>
 
     <div class="txt_field">
-      <input type="text"  name="telephone" required [(ngModel)]="form.telephone" #telephone="ngModel">
+      <input type="text"  name="telephone" [(ngModel)]="patient.telephone">
       <span></span>
-      <label>Telephone</label>
-      <div class="form_error" *ngIf="telephone.errors && f.submitted"> Veuillez saisir votre numero de téléphone</div>
+      <label>Télephone</label>
     </div>
 
     <div class="txt_field">
-
-      <input type="password" name="password"  [(ngModel)]="form.password" #password="ngModel" required minlength="5">
+      <input type="password"  name="password" [(ngModel)]="patient.password">
       <span></span>
-      <label>Mot de Passe</label>
-
-      <div class="form_error" *ngIf="password.errors && f.submitted">
-        <div *ngIf="password.errors?.['required']"> Veuillez entrer votre mot de passe</div>
-        <div *ngIf="password.errors?.['minlength']">Votre mot de passe doit comporter 5 carrecteres minimum</div>
-      </div>
+      <label>Password</label>
     </div>
-    <input type="submit" value="Login">
+
+
+    <input type="submit" value="Ajouter" (click)="ajouterPatient()">
     <div class="signup_link">
-     Vous avez un compte <a href="#">Connexion</a>
+      Tu as déjà un compte <a routerLink="../login">se connecter</a>
     </div>
   </form>
 </div>
+

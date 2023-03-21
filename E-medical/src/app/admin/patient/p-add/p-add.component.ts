@@ -9,29 +9,29 @@ import { IPatient } from '../../../interfaces/patient';
 })
 export class PAddComponent {
 
-  constructor(private addPatients:  AddpatientService ){}
+  // constructor(private addPatients:  AddpatientService ){}
 
 
-  patient:IPatient = {
-    id:0,
-     nom:'',
-     telephone:'',
-     password:'',
-     abonnement_mensuel:0,
-     abonnement_annuel:0,
+  // patient:IPatient = {
+  //   id:0,
+  //    nom:'',
+  //    telephone:'',
+  //    password:'',
+  //    abonnement_mensuel:0,
+  //    abonnement_annuel:0,
 
-   }
+  //  }
 
-   ajouterPatient(){
-    this.addPatients.savePatient(this.patient).subscribe({
-   next:data=>{
-    console.log(data)
-    alert('Enregistré avec succès');
-   },
-   error:err=>{
-    console.log(err); }
-  });
-  }
+  //  ajouterPatient(){
+  //   this.addPatients.savePatient(this.patient).subscribe({
+  //  next:data=>{
+  //   console.log(data)
+  //   alert('Enregistré avec succès');
+  //  },
+  //  error:err=>{
+  //   console.log(err); }
+  // });
+  // }
 
 
 

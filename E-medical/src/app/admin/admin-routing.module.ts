@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: AdminLayoutComponent, children:[
-    { path: '', redirectTo: 'dashboard', pathMatch:'full'},
+    { path: '', redirectTo: 'hopital', pathMatch:'full'},
     { path: 'dashboard', component: DashboardComponent},
     {
       path: 'hopital', loadChildren: () => import('./hopital/hopital.module')
